@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+    <!-- Pattern for recommending electronics products -->
+    <category>
+        <pattern>SHOW ME * IN ELECTRONICS</pattern>
+        <template>
+            <think><set name="category">electronics</set></think>
+            Sure, here are some popular electronics products:
+            <!-- Logic to recommend electronics products -->
+            <srai>RECOMMEND_PRODUCTS</srai>
+        </template>
+    </category>
+
+    <!-- Pattern for handling user feedback -->
+    <category>
+        <pattern>DO YOU LIKE THIS PRODUCT?</pattern>
+        <template>
+            <!-- Logic to handle user feedback -->
+            Thank you for your feedback.
+        </template>
+    </category>
+
+    <!-- Common patterns -->
+    <category>
+        <pattern>RECOMMEND_PRODUCTS</pattern>
+        <template>
+            <!-- Logic to recommend products based on the category -->
+            <condition name="category">
+                <li value="electronics">
+                    - Laptop<br/>
+                    - Smartphone<br/>
+                    - Smartwatch<br/>
+                </li>
+                <!-- Add other categories and their respective products here -->
+            </condition>
+        </template>
+    </category>
+</aiml>
